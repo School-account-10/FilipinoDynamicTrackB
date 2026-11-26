@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Username Search and Breach Check</title>
+</head>
+<body>
+<h1>Username Search and Breach Check</h1>
+
+<p>
+<button id="showUsernameSearch">Username Search</button>
+<button id="showEmailCheck">Email Breach Check</button>
+<button id="showPasswordCheck">Password Breach Check</button>
+</p>
+
+<div id="usernameSearchPage">
+<h2>Username Search</h2>
+<p>Find out which websites have an account with a given username.</p>
+<p>
+<input id="usernameInput" placeholder="Enter a username">
+<button id="startSearchButton">Search</button>
+<button id="stopSearchButton" disabled>Stop</button>
+</p>
+<p id="variationsTried"></p>
+<p id="searchStatus"></p>
+<ul id="searchResults"></ul>
+<h3 id="manualHeading" hidden>These sites block automatic checks. Open them to look yourself:</h3>
+<ul id="manualLinks"></ul>
+</div>
+
+<div id="emailCheckPage" hidden>
+<h2>Email Breach Check</h2>
+<p>Scan for breached passwords</p>
+<p><input id="emailInput" type="email" placeholder="Enter an email address"></p>
+<p><button id="checkEmailButton">Check Email</button></p>
+<p id="emailStatus"></p>
+<ul id="emailResults"></ul>
+</div>
+
+<div id="passwordCheckPage" hidden>
+<h2>Password Breach Check</h2>
+<p>Your password never leaves this page. Only a small part of its fingerprint is sent.</p>
+<p><input id="passwordInput" type="password" placeholder="Enter a password"></p>
+<p><button id="checkPasswordButton">Check Password</button></p>
+<p id="passwordStatus"></p>
+</div>
+
+<script src="page.js"></script>
+<script src="username-search.js"></script>
+<script src="breach-check.js"></script>
+</body>
+</html>
